@@ -46,7 +46,6 @@ public class Day10_BinaryNumbers {
         int[] binary;
         int counter = 0;
         int base = 1;
-        int remainder = 0;
 
         while (base <= decimal) {
             if (base * 2 <= decimal) {
@@ -64,8 +63,6 @@ public class Day10_BinaryNumbers {
                 if (Math.pow(2, i) <= decimal) {
                     decimal -= Math.pow(2, i);
                     binary[i] = 1;
-                } else {
-                    binary[i - 1] = 0;
                 }
             }
             binary[0] = decimal == 1 ? 1 : 0;
